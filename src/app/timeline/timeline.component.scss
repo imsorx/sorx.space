@@ -1,0 +1,37 @@
+h1 {
+  font-size: 2em;
+}
+
+ul {
+  padding-left: 3em;
+  list-style: none;
+  li {
+    position: relative;
+    padding: 1em 0;
+    span {
+      font-style: italic;
+      opacity: 0.6;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: -2em;
+      width: 3px;
+      background: var(--asscent);
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      width: 12px;
+      left: -2em;
+      height: 12px;
+      background: var(--primary-bg);
+      border: solid 3px var(--asscent);
+      border-radius: 100%;
+      transform: translate(-45%, -50%);
+    }
+  }
+}

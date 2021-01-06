@@ -1,0 +1,25 @@
+section {
+  display: block;
+
+  .articles {
+    width: 100%;
+    --txt: #000;
+    --bg: #fff;
+    .dark {
+      --txt: var(--primary-txt);
+      --bg: var(--primary-bg);
+    }
+    .switch {
+      display: flex;
+      justify-content: center;
+      font-family: var(--primary-ff);
+      font-weight: 300;
+      span {
+        cursor: pointer;
+      }
+      span:hover {
+        box-shadow: 0 1px 0 #fff;
+      }
+    }
+  }
+}

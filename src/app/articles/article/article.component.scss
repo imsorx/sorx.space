@@ -1,0 +1,37 @@
+article {
+    header {
+      border-left: 4px solid var(--asscent);
+      padding-left: 1em;
+      margin-bottom: 0.5em;
+      h1 {
+        font-size: 2.5em;
+      }
+      h3 {
+        font-size: 0.9em;
+        font-family: var(--secondary-ff);
+      }
+    }
+    p {
+      padding: 1em;
+      color: var(--txt);
+      font-size: 1.1em;
+      font-weight: 400;
+      line-height: 1.5;
+      background: var(--bg);
+      border-radius: 4px;
+    }
+    footer {
+      margin-top: 0.5em;
+      ul {
+        list-style: none;
+        display: flex;
+        justify-content: flex-end;
+        li:nth-child(n + 2) {
+          margin-left: 1em;
+        }
+        li {
+          text-transform: uppercase;
+        }
+      }
+    }
+  }
