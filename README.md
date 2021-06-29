@@ -19,9 +19,6 @@
 
 
 # Overview
-<p align="center">
-<img src="https://github.com/imsorx/imsorx.github.io/raw/master/assets/images/coding.svg" alt="Login Page" width="300px">
-</p>
 I've build this website from scratch without no frameworks and without any mockups, i love to experiments around a lot and you can see it in this website ;)
 
 
