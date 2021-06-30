@@ -1,16 +1,14 @@
 import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
-import { AboutComponent } from './about/about.component';
-import { ArticlesComponent } from './articles/articles.component';
-import { ProjectsComponent } from './projects/projects.component';
-import { TimelineComponent } from './timeline/timeline.component';
-
+import { RouterModule, Routes } from '@angular/router';
+import { AboutComponent } from './components/about/about.component';
+import { ResourcesComponent } from './components/resources/resources.component';
+import { TimelineComponent } from './components/timeline/timeline.component';
 
 const routes: Routes = [
-  { path: '', component: AboutComponent, pathMatch: 'full' },
+  { path: '', component: AboutComponent },
   { path: 'timeline', component: TimelineComponent },
-  { path: 'projects', component: ProjectsComponent },
-  { path: 'articles', component: ArticlesComponent },
+  { path: 'resources', component: ResourcesComponent },
+  { path: 'blog', loadChildren: () => import('./blog/blog.module').then(m => m.BlogModule) }
 ];
 
 @NgModule({

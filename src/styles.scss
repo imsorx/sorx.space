@@ -1,40 +1,46 @@
-/* You can add global styles to this file, and also import other style files */
-:root {
-  --primary-txt: #ececec;
-  --primary-bg: #151924;
-  --primary-ff: "Source Sans Pro", Sans-Serif;
-  --secondary-ff: "Playfair Display", serif;
-  --asscent: #e6af2e;
-  --asscent-light: #f5d061;
-}
-*,
-*::after,
-*::before {
-  padding: 0;
+* {
   margin: 0;
+  padding: 0;
   box-sizing: border-box;
+  font-family: "Work Sans", sans-serif;
+}
+
+html {
+  // height: 100vh;
+  // width: 100vw;
+  background-color: #212121;
+  background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+  font-size: 16px;
+  position: relative;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin-bottom: 1.5em;
+  font-family: "Bitter", serif;
+}
+
+main p {
+  font-family: "Bitter", serif;
+  letter-spacing: 0.3px;
+  line-height: 2;
 }
 
 a {
-  color: var(--primary-txt);
   text-decoration: none;
-  background-color: transparent;
-}
-body {
-  font-family: "Source Sans Pro", Sans-Serif;
-  font-size: 18px;
-  font-weight: 300;
-  line-height: 1.5;
-  color: var(--primary-txt);
-  background-color: var(--primary-bg);
-}
-section {
-  margin-inline: auto;
-  display:grid;
-  place-content: center;
-  width: min(90%, 110ch);
-  height: calc(100vh - 100px);
-  h1 {
-    font-family: var(--secondary-ff);
+  color: #fff;
+  i {
+    font-size: 1.2em;
   }
+}
+
+p + p {
+  margin-top: 0.5em;
+}
+
+.flex {
+  display: flex;
 }

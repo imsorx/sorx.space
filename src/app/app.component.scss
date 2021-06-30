@@ -1,0 +1,13 @@
+@media only screen and (min-width: 100ch) {
+  main {
+    border-radius: 4px;
+  }
+}
+
+main {
+  width: min(100%, 80ch);
+  margin-inline: auto;
+  padding: 5em min(5em, 10%) 5em min(5em, 10%);
+  background: #fff;
+  background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+}

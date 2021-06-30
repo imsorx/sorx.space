@@ -1,0 +1,33 @@
+<header>
+  <p class="logo">S O R X</p>
+  <nav [ngClass]="{ open: isOpen }">
+    <a
+      routerLink="/"
+      routerLinkActive="active"
+      [routerLinkActiveOptions]="{ exact: true }"
+      (click)="isOpen = !isOpen"
+    >
+      <i class="ri-user-5-fill"></i> About
+    </a>
+    <a
+      routerLink="/timeline"
+      routerLinkActive="active"
+      (click)="isOpen = !isOpen"
+    >
+      <i class="ri-calendar-check-fill"></i> Timeline
+    </a>
+    <a
+      routerLink="/resources"
+      routerLinkActive="active"
+      (click)="isOpen = !isOpen"
+    >
+      <i class="ri-archive-drawer-fill"></i> Resources
+    </a>
+    <a routerLink="/blog" routerLinkActive="active" (click)="isOpen = !isOpen">
+      <i class="ri-article-fill"></i> Blog
+    </a>
+  </nav>
+  <button (click)="isOpen = !isOpen">
+    <i [ngClass]="isOpen ? 'ri-close-line':'ri-menu-5-fill'"></i>
+  </button>
+</header>

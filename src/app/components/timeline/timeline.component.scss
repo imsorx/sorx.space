@@ -1,0 +1,39 @@
+ul {
+  list-style: none;
+
+  li {
+    position: relative;
+    display: flex;
+    padding-bottom: 2em;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -1em;
+      width: 2px;
+      height: 100%;
+      background-color: #212121;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0.5em;
+      left: -15px;
+      width: 12px;
+      height: 12px;
+      transform: translate(-50%, -50%);
+      background-color: #212121;
+      border-radius: 50%;
+    }
+    article {
+      margin-left: auto;
+      text-align: right;
+    }
+  }
+}
+
+p + p {
+  margin-top: 0em;
+}
