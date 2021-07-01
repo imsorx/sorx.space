@@ -1,21 +1,5 @@
-<!-- <p class="title">Hi there!</p>
-<div>
-  <p>
-    I am <b>Sourabh Patel</b>. I'm a tech geek 😎 and i love to explore
-    new technologies.I've expertise in <b>Web Development</b>.So far i've
-    worked on two most popular stacks <b>MEAN</b> and <b>LAMP</b> and also
-    explored <b>Docker</b>.
-  </p>
-  <p>
-    I'm also a avid Gamer🎮, i play mostly FPS like CSGO,Apex Legends,
-    Valorant but i also have 2k hrs in Dota 2 😁. My gamertag is
-    <b>sorx</b>, hence on most platform you can find me by handles sorx or
-    imsorx
-  </p>
-</div> -->
-<p *ngIf="isLoading">Loading...</p>
 <markdown
-  src="https://raw.githubusercontent.com/imsorx/imsorx/main/README.md"
-  (load)="onLoad($event)"
   (error)="onError($event)"
+  src="https://raw.githubusercontent.com/imsorx/imsorx/main/README.md"
 ></markdown>
+<p *ngIf="isFailed" align="center">Oops Github's server is not responding...🤷‍♂️</p>

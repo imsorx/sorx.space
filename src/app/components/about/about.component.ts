@@ -7,17 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AboutComponent implements OnInit {
 
-  isLoading: boolean = true;
+  isFailed: boolean = false;
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  onLoad(event: string) {
-    if (event) this.isLoading = false;
-  }
-
   onError(event: string) {
-    console.log(event);
+    this.isFailed = true;
   }
 }

@@ -9,10 +9,11 @@ footer {
 .socials {
   margin-left: auto;
   a {
+    position: relative;
     display: flex;
     align-items: center;
-    position: relative;
     padding: 1em;
+    font-size: 1.2em;
 
     &:hover span {
       opacity: 1;

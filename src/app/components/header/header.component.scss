@@ -26,13 +26,14 @@ button {
   width: 35px;
   margin: 1.5em;
   color: #8ef19b;
+  font-size: 1.5em;
   border-radius: 50%;
   background-color: #fff;
   border: none;
-  font-size: 1.5em;
-  z-index: 12;
+  cursor: pointer;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
     rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+  z-index: 12;
 }
 nav > a {
   font-size: 1em;

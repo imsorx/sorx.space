@@ -1,15 +1,17 @@
 ul {
   list-style: none;
+  margin-left: 1.5em;
 
   li {
     position: relative;
     display: flex;
     padding-bottom: 2em;
 
+
     &::before {
       content: "";
       position: absolute;
-      top: 0;
+      top: 8px;
       left: -1em;
       width: 2px;
       height: 100%;
@@ -19,8 +21,8 @@ ul {
     &::after {
       content: "";
       position: absolute;
-      top: 0.5em;
-      left: -15px;
+      top: 0.8em;
+      left: -14px;
       width: 12px;
       height: 12px;
       transform: translate(-50%, -50%);
