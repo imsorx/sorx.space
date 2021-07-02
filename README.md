@@ -1,27 +1,47 @@
-# SorxSpace
+<h1 align="center">
+  <br>
+  <img src="https://hotemoji.com/images/dl/i/ghost-emoji-by-twitter.png" alt="Ghost" width="25">
+  S O R X
+  <br>
+</h1>
+<h4 align="center">A portfolio website design.</h4>
+<p align="center">
+  <img src="https://img.shields.io/npm/v/npm?style=flat-square">
+  <img src="https://img.shields.io/npm/v/@angular/cli?label=%40angular%2Fcli&style=flat-square">
+</p>
+<p align="center">
+  <a href="#overview">Overview</a> •
+  <a href="#build">Build</a> •
+  <a href="#author">Author</a> •
+  <a href="#license">License</a>
+</p>
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.1.0.
+# Overview
 
-## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+<p align="center">
+</p>
+I've build this website from scratch without no frameworks and without any mockups, i love to experiments around a lot and you can see it in this website ;)
 
 ## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+First you need to install all dependencies by following command:
 
-## Running unit tests
+```bash
+$npm i
+```
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+To start development server (Hot-reload), run following command:
 
-## Running end-to-end tests
+```bash
+$ng serve -o
+```
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+To build ( add `--prod` for production build)
 
-## Further help
+```bash
+$ng build --prod
+```
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## Author
+
+[![](https://img.shields.io/badge/SorX-Sourabh--Patel-green?style=for-the-badge)](https://imsorx.github.io)
