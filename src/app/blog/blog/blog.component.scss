@@ -1,0 +1,27 @@
+article + article {
+  margin-top: 4em;
+}
+
+article{
+  animation: fadein 300ms ease-in;
+}
+a {
+  display: inline-block;
+  margin-top: 1em;
+}
+img {
+  margin: 0em 0 1em 0;
+  border-radius: 4px;
+  object-fit: cover;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+    transform: translateY(2%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

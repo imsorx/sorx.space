@@ -1,30 +1,17 @@
-<h1>Timeline</h1>
-<ul>
-  <li>
-    1997
-    <article>
-      <p>🐣 Born</p>
-    </article>
-  </li>
-  <li>
-    2015
-    <article>
-      <p>📚 Senior High School</p>
-      <p>N.H.S.S, Jabalpur</p>
-    </article>
-  </li>
-  <li>
-    2020
-    <article>
-      <p>👨‍🎓 Graduate,B.E</p>
-      <p>IPS Academy, Indore</p>
-    </article>
-  </li>
-  <li>
-    2020
-    <article>
-      <p>💼 Software Engineer</p>
-      <p>Gammastack Ltd., Indore</p>
-    </article>
-  </li>
-</ul>
+<ng-container *ngIf="items">
+  <h1><i class="ri-time-fill"></i> Timeline</h1>
+  <ul>
+    <li *ngFor="let item of items">
+      {{ item.year }}
+      <article>
+        <p>{{ item.activity }}</p>
+        <p *ngIf="item.vanue || item.location">
+          {{ item.vanue + "," }} {{ item.location }}
+        </p>
+      </article>
+    </li>
+  </ul>
+</ng-container>
+<p *ngIf="isFailed" align="center">
+  Oops Github's server is not responding...🤷‍♂️
+</p>

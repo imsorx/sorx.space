@@ -5,13 +5,13 @@ ul {
   li {
     position: relative;
     display: flex;
-    padding-bottom: 2em;
+    padding: 0 0 2em 1em;
 
 
     &::before {
       content: "";
       position: absolute;
-      top: 8px;
+      top: 0.7em;
       left: -1em;
       width: 2px;
       height: 100%;
@@ -19,15 +19,17 @@ ul {
     }
 
     &::after {
-      content: "";
+      content: "\EA67";
       position: absolute;
-      top: 0.8em;
-      left: -14px;
+      top: 0.02em;
+      left: -17px;
       width: 12px;
       height: 12px;
       transform: translate(-50%, -50%);
-      background-color: #212121;
-      border-radius: 50%;
+      font-family: remixicon !important;
+      font-size: 1.3em;
+      // background-color: #fff;
+      // border-radius: 50%;
     }
     article {
       margin-left: auto;

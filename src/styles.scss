@@ -38,7 +38,13 @@ code {
   font-family: monospace;
   background: hsla(142, 92%, 75%, 0.2);
 }
-
+pre code {
+  background: none;
+  &::selection,
+  span::selection {
+    background: #341364;
+  }
+}
 a {
   text-decoration: none;
   color: #fff;
@@ -50,7 +56,6 @@ a {
 p + p {
   margin-top: 0.5em;
 }
-
 main {
   p {
     font-family: "Bitter", serif;
@@ -58,7 +63,7 @@ main {
     line-height: 2;
   }
 
-  a{
+  a {
     color: initial;
     font-family: inherit;
     border-bottom: 2px solid #212121;
@@ -80,7 +85,11 @@ main {
       }
     }
   }
+  *::selection{
+    background: #84fab0;
+  }
 }
+
 .verticle-center {
   display: flex;
   align-items: center;

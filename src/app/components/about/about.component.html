@@ -1,5 +1,4 @@
-<markdown
-  (error)="onError($event)"
-  src="https://raw.githubusercontent.com/imsorx/imsorx/main/README.md"
-></markdown>
-<p *ngIf="isFailed" align="center">Oops Github's server is not responding...🤷‍♂️</p>
+<markdown (error)="onError($event)" [src]="url"></markdown>
+<p *ngIf="isFailed" align="center">
+  Oops Github's server is not responding...🤷‍♂️
+</p>
