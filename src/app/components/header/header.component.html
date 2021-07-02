@@ -26,8 +26,11 @@
     <a routerLink="/blog" routerLinkActive="active" (click)="isOpen = !isOpen">
       <i class="ri-article-fill"></i> Blog
     </a>
+    <button [hidden]="isOpen" (click)="isOpen = false">
+      <i class="ri-close-line"></i>
+    </button>
   </nav>
-  <button (click)="isOpen = !isOpen">
-    <i [ngClass]="isOpen ? 'ri-close-line':'ri-menu-5-fill'"></i>
+  <button (click)="isOpen = true">
+    <i class="ri-menu-5-fill"></i>
   </button>
 </header>

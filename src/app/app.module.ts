@@ -12,6 +12,7 @@ import { MarkdownModule } from 'ngx-markdown';
 import { HttpClient, HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { LoaderComponent } from './components/loader/loader.component';
 import { LoadingInterceptor } from './interceptors/loading.interceptor';
+import { ScrollToTopComponent } from './components/scroll-to-top/scroll-to-top.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { LoadingInterceptor } from './interceptors/loading.interceptor';
     AboutComponent,
     TimelineComponent,
     ResourcesComponent,
-    LoaderComponent
+    LoaderComponent,
+    ScrollToTopComponent
   ],
   imports: [
     BrowserModule,
