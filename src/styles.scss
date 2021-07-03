@@ -28,8 +28,9 @@ h1 {
   border-bottom: 1px solid #212121;
 }
 
-* + h2 {
-  margin-top: 2em;
+* + h2,
+* + h3 {
+  margin-top: 1.5em;
 }
 
 code {
@@ -45,6 +46,15 @@ pre code {
     background: #341364;
   }
 }
+blockquote {
+  padding: 8px;
+  font-size: 0.9em;
+  font-style: italic;
+  margin-block: 1em;
+  border-left: 4px solid #84fab0;
+  background: hsla(0, 0%, 13%, 0.02);
+}
+
 a {
   text-decoration: none;
   color: #fff;
@@ -85,7 +95,7 @@ main {
       }
     }
   }
-  *::selection{
+  *::selection {
     background: #84fab0;
   }
 }
@@ -93,4 +103,10 @@ main {
 .verticle-center {
   display: flex;
   align-items: center;
+}
+
+@media only screen and (max-width: 600px) {
+  h1 {
+    font-size: 1.8em;
+  }
 }

@@ -5,25 +5,25 @@
       routerLink="/"
       routerLinkActive="active"
       [routerLinkActiveOptions]="{ exact: true }"
-      (click)="isOpen = !isOpen"
+      (click)="isOpen = false"
     >
       <i class="ri-user-5-fill"></i> About
     </a>
     <a
       routerLink="/timeline"
       routerLinkActive="active"
-      (click)="isOpen = !isOpen"
+      (click)="isOpen = false"
     >
       <i class="ri-calendar-check-fill"></i> Timeline
     </a>
     <a
       routerLink="/resources"
       routerLinkActive="active"
-      (click)="isOpen = !isOpen"
+      (click)="isOpen = false"
     >
       <i class="ri-archive-drawer-fill"></i> Resources
     </a>
-    <a routerLink="/blog" routerLinkActive="active" (click)="isOpen = !isOpen">
+    <a routerLink="/blog" routerLinkActive="active" (click)="isOpen = false">
       <i class="ri-article-fill"></i> Blog
     </a>
     <button [hidden]="isOpen" (click)="isOpen = false">
