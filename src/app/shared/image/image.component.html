@@ -1,0 +1,10 @@
+<div class="wrapper" [ngClass]="{ loading: isLoading }">
+  <img
+    [src]="src"
+    [alt]="label"
+    [attr.width]="width"
+    [attr.height]="height"
+    (load)="isLoading = false"
+    (error)="onError()"
+  />
+</div>

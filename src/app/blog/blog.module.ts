@@ -4,15 +4,18 @@ import { BlogComponent } from './blog/blog.component';
 import { RouterModule, Routes } from '@angular/router';
 import { PostComponent } from './post/post.component';
 import { MarkdownModule } from 'ngx-markdown';
+import { SharedModule } from '../shared/shared.module';
 
 const routes: Routes = [
   {
     path: '',
     component: BlogComponent,
+    data: { title: 'Blog' }
   },
   {
     path: ':file',
-    component: PostComponent
+    component: PostComponent,
+    data: { title: 'Blog' }
   }
 ];
 
@@ -24,7 +27,8 @@ const routes: Routes = [
   imports: [
     CommonModule,
     RouterModule.forChild(routes),
-    MarkdownModule.forChild()
+    MarkdownModule.forChild(),
+    SharedModule
   ]
 })
 export class BlogModule { }

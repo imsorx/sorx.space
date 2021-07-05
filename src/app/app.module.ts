@@ -10,9 +10,9 @@ import { TimelineComponent } from './components/timeline/timeline.component';
 import { ResourcesComponent } from './components/resources/resources.component';
 import { MarkdownModule } from 'ngx-markdown';
 import { HttpClient, HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
-import { LoaderComponent } from './components/loader/loader.component';
 import { LoadingInterceptor } from './interceptors/loading.interceptor';
 import { ScrollToTopComponent } from './components/scroll-to-top/scroll-to-top.component';
+import { SharedModule } from './shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -22,14 +22,14 @@ import { ScrollToTopComponent } from './components/scroll-to-top/scroll-to-top.c
     AboutComponent,
     TimelineComponent,
     ResourcesComponent,
-    LoaderComponent,
-    ScrollToTopComponent
+    ScrollToTopComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    MarkdownModule.forRoot({ loader: HttpClient })
+    MarkdownModule.forRoot({ loader: HttpClient }),
+    SharedModule
   ],
   providers: [
     {

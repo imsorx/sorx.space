@@ -1,10 +1,32 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { Title } from '@angular/platform-browser';
+import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
+import { filter, map } from 'rxjs/operators';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
-  title = 'sorx-space';
+export class AppComponent implements OnInit {
+  
+  baseTitle: string = 'Sourabh Patel | '
+
+  constructor(private title: Title, private router: Router, private activatedRoute: ActivatedRoute) { }
+
+  ngOnInit() {
+    this.router.events.pipe(
+      filter(event => event instanceof NavigationEnd),
+      map(() => {
+        let child = this.activatedRoute.firstChild;
+
+        while (child?.firstChild) {
+          child = child.firstChild;
+        }
+
+        return child?.snapshot.data['title'] ?
+          this.baseTitle + child.snapshot.data['title'] : this.baseTitle;
+      })
+    ).subscribe((ttl: string) => this.title.setTitle(ttl));
+  }
 }

@@ -1,13 +1,15 @@
 <ng-container *ngIf="items">
   <ul>
     <li *ngFor="let item of items">
-      {{ item.year }}
-      <article>
-        <p>{{ item.activity }}</p>
-        <p *ngIf="item.vanue || item.location">
-          {{ item.vanue + "," }} {{ item.location }}
-        </p>
-      </article>
+      <div>
+        {{ item.year }}
+        <article>
+          <p>{{ item.activity }}</p>
+          <p *ngIf="item.vanue || item.location">
+            {{ item.vanue + "," }} {{ item.location }}
+          </p>
+        </article>
+      </div>
     </li>
   </ul>
 </ng-container>

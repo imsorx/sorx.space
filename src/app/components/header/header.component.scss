@@ -12,6 +12,15 @@ header {
   color: #fff;
   user-select: none;
   margin-bottom: 1em;
+  p {
+    text-align: center;
+    &:last-child {
+      font-size: 0.3em;
+    }
+    span:first-child {
+      margin-right: 1em;
+    }
+  }
 }
 nav {
   display: flex;
@@ -34,11 +43,14 @@ nav > a {
   font-size: 1em;
   display: flex;
   align-items: center;
-  padding: 0.5em 0;
+  padding: 0.3em 0;
+  border-bottom: 2px solid transparent;
 }
+
 nav > a.active {
-  border-bottom: 1px solid #fff;
+  border-bottom: 2px solid #fff;
 }
+
 nav > a ~ a {
   margin-left: 1em;
 }
@@ -46,6 +58,9 @@ nav > a ~ a {
   .logo {
     margin-bottom: 0;
     font-size: 1.8em;
+    p {
+      text-align: left;
+    }
   }
   header {
     flex-direction: row;
@@ -80,5 +95,9 @@ nav > a ~ a {
     margin: 0 !important;
     padding: 0.5em 0;
     margin-bottom: 1em !important;
+    &.active {
+      border: none;
+      color: var(--primary-accent);
+    }
   }
 }

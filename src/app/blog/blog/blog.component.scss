@@ -1,18 +1,9 @@
-article + article {
-  margin-top: 4em;
-}
-
-article{
+article {
   animation: fadein 300ms ease-in;
-}
-a {
-  display: inline-block;
-  margin-top: 1em;
-}
-img {
-  margin: 0em 0 1em 0;
-  border-radius: 4px;
-  object-fit: cover;
+
+  & + article {
+    margin-top: 4em;
+  }
 }
 
 @keyframes fadein {
