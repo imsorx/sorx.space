@@ -18,7 +18,7 @@
     padding-bottom: 0.5em;
     font-family: "Bitter", serif;
   }
-  h1{
+  h1 {
     border-bottom: 1px solid rgba($color: #212121, $alpha: 0.5);
   }
 
@@ -83,7 +83,7 @@
     font-family: monospace;
     background: hsla(142, 92%, 75%, 0.2);
   }
-  
+
   pre {
     border-radius: 4px;
     code {
@@ -102,5 +102,10 @@
     margin-block: 1em;
     border-left: 4px solid var(--primary-accent);
     background: hsla(0, 0%, 13%, 0.02);
+  }
+
+  img {
+    width: 100%;
+    border-radius: 4px;
   }
 }
