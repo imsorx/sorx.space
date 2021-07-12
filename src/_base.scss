@@ -54,7 +54,7 @@ ul {
   li {
     line-height: 2;
     font-family: "Bitter", serif;
-    &::before {
+    &::marker {
       content: "\EA6E";
       line-height: 2;
       font-size: 0.9em;
