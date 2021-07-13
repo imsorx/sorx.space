@@ -24,7 +24,7 @@ import { SharedModule } from './shared/shared.module';
     AboutComponent,
     TimelineComponent,
     ResourcesComponent,
-    ScrollToTopComponent,
+    ScrollToTopComponent
   ],
   imports: [
     BrowserModule,

@@ -1,13 +1,26 @@
 footer {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   width: min(100%, 80ch);
   margin-inline: auto;
   padding: 1em;
   color: #fff;
 }
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding-bottom: 0.5em;
+  font-size: 0.9rem;
+  color: var(--primary-txt);
+  border-bottom: 1px solid var(--primary-txt);
+  transition: all 300ms ease-out;
+  &:hover {
+    border-bottom-color: transparent;
+  }
+}
 .socials {
-  margin-left: auto;
   a {
     position: relative;
     display: flex;
@@ -51,7 +64,7 @@ footer {
   }
 }
 @media only screen and (max-width: 600px) {
-  .socials {
-    margin-right: auto;
+  footer {
+    flex-direction: column;
   }
 }

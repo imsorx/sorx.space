@@ -1,3 +1,9 @@
+:root {
+  --primary-accent: #2feaa8;
+  --secondary-accent: #028cf3;
+  --primary-txt: #fff;
+  --secondary-txt: #212121;
+}
 * {
   margin: 0;
   padding: 0;
@@ -6,10 +12,6 @@
 }
 
 html {
-  --primary-accent: #84fab0;
-  --secondary-accent: #8fd3f4;
-  --primary-txt: #fff;
-  --secondary-txt: #212121;
   position: relative;
   height: 100vh;
   font-size: 16px;
@@ -26,8 +28,8 @@ html {
 }
 
 ::selection {
-  background: var(--primary-accent);
-  color: var(--secondary-txt);
+  background: #212121;
+  color: #fff;
 }
 
 ::-webkit-scrollbar {

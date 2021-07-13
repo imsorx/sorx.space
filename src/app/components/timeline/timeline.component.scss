@@ -18,6 +18,10 @@ ul {
       }
     }
 
+    &::marker {
+      content: none;
+    }
+
     //Dot
     &::before {
       content: "";

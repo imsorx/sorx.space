@@ -78,10 +78,22 @@
   }
 
   code {
+    position: relative;
     padding: 0 4px;
     font-size: 0.9em;
     font-family: monospace;
-    background: hsla(142, 92%, 75%, 0.2);
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      opacity: 0.2;
+      background: var(--primary-accent);
+      z-index: 0;
+    }
   }
 
   pre {
@@ -100,7 +112,7 @@
     font-size: 0.9em;
     font-style: italic;
     margin-block: 1em;
-    border-left: 4px solid var(--primary-accent);
+    border-left: 3px solid var(--primary-accent);
     background: hsla(0, 0%, 13%, 0.02);
   }
 
