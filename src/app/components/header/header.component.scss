@@ -7,18 +7,20 @@ header {
   padding: 2em 0;
 }
 .logo {
-  font-size: 2.5em;
+  font-size: 2.9em;
   font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.8rem;
   color: #fff;
   user-select: none;
   margin-bottom: 1em;
   p {
+    font-family: "Concert One", cursive;
     text-align: center;
     &:last-child {
-      font-size: 0.3em;
-    }
-    span:first-child {
-      margin-right: 1em;
+      letter-spacing: 0.4em;
+      font-size: 0.32em;
+      font-weight: 400;
     }
   }
 }
@@ -57,9 +59,12 @@ nav > a ~ a {
 @media only screen and (max-width: 600px) {
   .logo {
     margin-bottom: 0;
-    font-size: 1.8em;
+    font-size: 2.5em;
     p {
       text-align: left;
+      &:last-child {
+        display: none;
+      }
     }
   }
   header {

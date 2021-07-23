@@ -99,10 +99,12 @@
   pre {
     border-radius: 4px;
     code {
-      background: none;
       &::selection,
       span::selection {
         background: #341364;
+      }
+      &::after{
+        content: none;
       }
     }
   }

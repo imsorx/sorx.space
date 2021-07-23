@@ -67,10 +67,45 @@ ul {
 }
 
 main {
+  position: relative;
   width: min(95%, 80ch);
   margin-inline: auto;
   padding: clamp(1.66em, 5%, 4rem);
   background: #fff;
   border-radius: 4px;
   background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 1em;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+      90deg,
+      var(--secondary-accent) 0%,
+      var(--primary-accent) 100%
+    );
+    filter: blur(5vw) contrast(1.5) brightness(1.2);
+    animation: pulse 2000ms ease-in-out infinite alternate;
+    z-index: -1;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 0.2;
+    border-radius: 50% 0;
+  }
+  25% {
+    border-radius: 25% 25%;
+  }
+  50% {
+    border-radius: 50% 0;
+  }
+  100% {
+    border-radius: 0;
+    opacity: 1;
+  }
 }
