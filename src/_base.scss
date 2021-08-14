@@ -1,6 +1,6 @@
 :root {
-  --primary-accent: #2feaa8;
-  --secondary-accent: #028cf3;
+  --primary-accent: #434343;
+  --secondary-accent: #000000;
   --primary-txt: #fff;
   --secondary-txt: #212121;
 }
@@ -13,20 +13,26 @@
 
 html {
   position: relative;
-  height: 100vh;
   font-size: 16px;
+  min-height: 100vh;
   -webkit-font-smoothing: antialiased;
   background-color: #212121;
-  background-image: linear-gradient(
-    90deg,
-    var(--primary-accent) 0%,
-    var(--secondary-accent) 100%
-  );
+  background-image: repeating-radial-gradient(
+      circle at 100% 100%,
+      transparent 0,
+      rgba(255, 255, 255, 0.2) 20vw
+    ),
+    repeating-linear-gradient(var(--primary-accent), var(--secondary-accent));
+  background-attachment: fixed;
+
   //Mozilla Scrolbars
   scrollbar-width: thin;
-  scrollbar-color: #fff var(--secondary-accent);
+  scrollbar-color: #fff transparent;
 }
-
+body {
+  overflow-y: scroll; // Always show to avoid abrupt layout shift
+  overflow-x: hidden;
+}
 ::selection {
   background: #212121;
   color: #fff;
@@ -34,7 +40,7 @@ html {
 
 ::-webkit-scrollbar {
   width: 8px;
-  background: var(--secondary-accent);
+  background: transparent;
 }
 ::-webkit-scrollbar-thumb {
   background: #fff;
@@ -74,23 +80,6 @@ main {
   background: #fff;
   border-radius: 4px;
   background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
-
-  &::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 1em;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(
-      90deg,
-      var(--secondary-accent) 0%,
-      var(--primary-accent) 100%
-    );
-    filter: blur(5vw) contrast(1.5) brightness(1.2);
-    animation: pulse 2000ms ease-in-out infinite alternate;
-    z-index: -1;
-  }
 }
 
 @keyframes pulse {

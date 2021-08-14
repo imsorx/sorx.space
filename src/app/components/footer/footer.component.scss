@@ -46,7 +46,7 @@ button {
       position: absolute;
       top: 0;
       left: 50%;
-      transform: translate(-50%, 0);
+      transform: translate(-50%, 130%);
       border: 5px solid #fff;
       border-color: #fff transparent transparent transparent;
       opacity: 0;
@@ -59,7 +59,7 @@ button {
 
     &:hover span {
       opacity: 1;
-      transform: translate(0%, -100%);
+      transform: translate(0%, -50%);
     }
   }
 }

@@ -8,28 +8,20 @@
       routerLink="/"
       routerLinkActive="active"
       [routerLinkActiveOptions]="{ exact: true }"
-      (click)="isOpen = false"
+      #close
     >
       <i class="ri-user-5-fill"></i> About
     </a>
-    <a
-      routerLink="/timeline"
-      routerLinkActive="active"
-      (click)="isOpen = false"
-    >
+    <a routerLink="/timeline" routerLinkActive="active" #close>
       <i class="ri-calendar-check-fill"></i> Timeline
     </a>
-    <a
-      routerLink="/resources"
-      routerLinkActive="active"
-      (click)="isOpen = false"
-    >
+    <a routerLink="/resources" routerLinkActive="active" #close>
       <i class="ri-archive-drawer-fill"></i> Resources
     </a>
-    <a routerLink="/blog" routerLinkActive="active" (click)="isOpen = false">
+    <a routerLink="/blog" routerLinkActive="active" #close>
       <i class="ri-article-fill"></i> Blog
     </a>
-    <button [hidden]="isOpen" (click)="isOpen = false">
+    <button [hidden]="isOpen" #close>
       <i class="ri-close-line"></i>
     </button>
   </nav>
