@@ -38,7 +38,7 @@ html {
       repeating-linear-gradient(var(--primary-accent), var(--secondary-accent));
     background-attachment: fixed;
     transform-origin: bottom right;
-    animation: grow 50000ms infinite alternate;
+    animation: grow 60s infinite alternate;
     z-index: -1;
   }
 }
