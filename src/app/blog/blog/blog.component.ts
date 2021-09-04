@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { SlideInLeft } from 'src/app/animations';
 import { BlogService } from 'src/app/services/blog.service';
-import { environment } from 'src/environments/environment';
 
 interface Post {
   title: string,
@@ -12,11 +12,12 @@ interface Post {
 @Component({
   selector: 'app-blog',
   templateUrl: './blog.component.html',
-  styleUrls: ['./blog.component.scss']
+  styleUrls: ['./blog.component.scss'],
+  animations: [SlideInLeft]
 })
 export class BlogComponent implements OnInit {
-  
-  posts: Post[] = [];
+
+  posts?: Post[];
   isEmpty: boolean = false;
   isFailed: boolean = false;
 
@@ -25,7 +26,6 @@ export class BlogComponent implements OnInit {
   ngOnInit(): void {
     this.blogService.posts.subscribe((data: Post[]) => {
       this.posts = data;
-      this.isEmpty = data.length == 0
     }, err => this.isFailed = true);
   }
 

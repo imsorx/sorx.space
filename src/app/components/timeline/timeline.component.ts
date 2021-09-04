@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { SlideIn } from 'src/app/animations';
 import { environment } from 'src/environments/environment';
 
 interface Timelog {
@@ -12,7 +13,8 @@ interface Timelog {
 @Component({
   selector: 'app-timeline',
   templateUrl: './timeline.component.html',
-  styleUrls: ['./timeline.component.scss']
+  styleUrls: ['./timeline.component.scss'],
+  animations: [SlideIn]
 })
 export class TimelineComponent implements OnInit {
 

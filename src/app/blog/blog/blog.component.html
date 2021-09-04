@@ -1,20 +1,17 @@
-<ng-container *ngIf="!isEmpty; else noposts">
-  <article *ngFor="let post of posts" class="md">
-    <h1>{{ post.title }}</h1>
-    <image
-      [src]="post.cover"
-      width="100%"
-      height="200px"
-      [label]="post.title"
-    ></image>
-    <p>{{ post.description }}</p>
-    <a [routerLink]="post.file">Read more</a>
-  </article>
+<ng-container *ngIf="posts">
+  <div @slideInLeft>
+    <article *ngFor="let post of posts" class="md">
+      <h1>{{ post.title }}</h1>
+      <image [src]="post.cover" width="100%" height="200px" [label]="post.title"></image>
+      <p>{{ post.description }}</p>
+      <a [routerLink]="post.file">Read more</a>
+    </article>
+  </div>
 </ng-container>
 
-<ng-template #noposts>
+<ng-container *ngIf="posts?.length == 0" #noposts>
   <p align="center">Oops...he forgot to post a single post 😓😐</p>
-</ng-template>
+</ng-container>
 
 <ng-container *ngIf="isFailed">
   <p align="center">Oops Github's server is not responding...🤷‍♂️</p>

@@ -9,12 +9,23 @@ import { filter, map } from 'rxjs/operators';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
-  
+
   baseTitle: string = 'Sourabh Patel | '
 
   constructor(private title: Title, private router: Router, private activatedRoute: ActivatedRoute) { }
 
   ngOnInit() {
+    console.info(`
+    #######  #######  ######   ###  ## 
+    ##       ##   ##  ##  ##   ###  ## 
+    #######  ##   ##  ##  ##   ###  ## 
+         ##  ##  ###  #######   #####  
+    ###  ##  ##  ###  ### ###  ##  ### 
+    ###  ##  ##  ###  ### ###  ##  ### 
+    #######  #######  ### ###  ##  ###
+    `);
+    console.log('i see you are man of curiuosity O_o too.....');
+
     this.router.events.pipe(
       filter(event => event instanceof NavigationEnd),
       map(() => {
