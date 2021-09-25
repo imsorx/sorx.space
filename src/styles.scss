@@ -19,7 +19,7 @@
     font-family: "Bitter", serif;
   }
   h1 {
-    border-bottom: 1px solid rgba($color: #212121, $alpha: 0.5);
+    border-bottom: 1px solid var(--primary-txt-light);
   }
 
   h1:first-child,
@@ -72,9 +72,9 @@
   }
 
   a {
-    color: initial;
+    color: var(--primary-txt);
     font-family: inherit;
-    border-bottom: 2px solid var(--secondary-txt);
+    border-bottom: 2px solid var(--secondary-bg);
   }
 
   code {
@@ -91,7 +91,7 @@
       left: 0;
       right: 0;
       opacity: 0.2;
-      background: var(--primary-accent);
+      background: var(--accent);
       z-index: 0;
     }
   }
@@ -114,9 +114,10 @@
     font-size: 0.9em;
     font-style: italic;
     margin-block: 1em;
-    color: #292929;
-    border-left: 3px solid var(--primary-accent);
-    background: hsla(0, 0%, 13%, 0.02);
+    color: var(--primary-txt);
+    border-left: 3px solid var(--accent);
+    background: var(--primary-bg-light);
+    border-radius: 4px;
   }
 
   img {

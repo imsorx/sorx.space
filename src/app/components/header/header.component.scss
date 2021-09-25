@@ -11,7 +11,7 @@ header {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.8rem;
-  color: #fff;
+  color: var(--primary-txt);
   user-select: none;
   margin-bottom: 1em;
   p {
@@ -24,29 +24,39 @@ header {
     }
   }
 }
+.nav-links{
+  display: flex;
+}
 nav {
   display: flex;
   position: relative;
 }
 
 button {
-  display: none;
   height: 35px;
   width: 35px;
-  color: #8ef19b;
-  color: #fff;
+  color: var(--primary-txt);
   font-size: 1.5em;
   border: none;
   background: none;
   cursor: pointer;
+
+  &.nav-toggle{
+    display: none;
+  }
+  &.theme-toggle{
+    font-size: 1em;
+    margin-left: 0.5em;
+  }
 }
 
 nav > a {
-  font-size: 1em;
   display: flex;
   align-items: center;
   padding: 0.3em 0;
   position: relative;
+  font-size: 1em;
+  color: var(--primary-txt);
   &::after {
     content: "";
     position: absolute;
@@ -84,7 +94,7 @@ nav > a ~ a {
     justify-content: space-between;
     padding-inline: 5%;
   }
-  button {
+  button.nav-toggle {
     display: block;
   }
   nav {
@@ -98,7 +108,7 @@ nav > a ~ a {
     align-items: center;
     justify-content: center;
 
-    background-color: #212121;
+    background-color: var(--primary-bg);
     -webkit-font-smoothing: antialiased;
     transform-origin: 0% 0%;
     transform: translate(100%, 0);
@@ -112,8 +122,9 @@ nav > a ~ a {
     margin: 0 !important;
     padding: 0.5em 0;
     margin-bottom: 1em !important;
+    color: var(--primary-txt-light);
     &.active {
-      color: var(--primary-accent);
+      color: var(--primary-txt);
       &::after {
         content: none;
       }

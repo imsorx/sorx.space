@@ -1,8 +1,24 @@
 :root {
-  --primary-accent: #434343;
-  --secondary-accent: #000000;
-  --primary-txt: #fff;
-  --secondary-txt: #212121;
+  --accent: hsl(37, 92%, 51%);
+  --accent-light: hsl(37, 98%, 70%);
+  --accent-dark: hsl(35, 92%, 40%);
+  --primary-txt: hsl(0, 0%, 5%);
+  --primary-txt-light: hsl(0, 0%, 30%);
+  --secondary-txt: hsl(0, 0%, 100%);
+  --primary-bg: hsl(0, 0%, 100%);
+  --primary-bg-light: hsl(0, 0%, 97%);
+  --secondary-bg: hsl(0, 0%, 10%);
+}
+.dark {
+  --primary-txt: hsl(0, 0%, 100%);
+  --primary-txt-light: hsl(0, 0%, 70%);
+  --secodary-txt: hsl(0, 0%, 5%);
+  --primary-bg: hsl(0, 0%, 10%);
+  --primary-bg-light: hsl(0, 0%, 18%);
+  --secondary-bg: hsl(0, 0%, 90%);
+  &::after{
+    filter: invert(0%);
+  }
 }
 * {
   margin: 0;
@@ -16,29 +32,23 @@ html {
   font-size: 16px;
   min-height: 100vh;
   -webkit-font-smoothing: antialiased;
-  background-color: #212121;
+  background-color: var(--primary-bg);
 
   //Mozilla Scrolbars
   scrollbar-width: thin;
-  scrollbar-color: #fff transparent;
+  scrollbar-color: #fff #212122;
   // overflow: hidden;
 
   &::after {
     content: "";
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: repeating-radial-gradient(
-        circle at 100% 100%,
-        transparent 0,
-        rgba(255, 255, 255, 0.2) 10vw
-      ),
-      repeating-linear-gradient(var(--primary-accent), var(--secondary-accent));
-    background-attachment: fixed;
-    transform-origin: bottom right;
-    animation: grow 60s infinite alternate;
+    background-image: url("assets/bg/ocean.jpg");
+    filter: invert(100%);
+    animation: scroll 30s linear infinite alternate;
     z-index: -1;
   }
 }
@@ -47,13 +57,13 @@ body {
   overflow-x: hidden;
 }
 ::selection {
-  background: #212121;
-  color: #fff;
+  background: var(--accent-dark);
+  color: var(--secondary-txt);
 }
 
 ::-webkit-scrollbar {
   width: 8px;
-  background: transparent;
+  background: #212121;
 }
 ::-webkit-scrollbar-thumb {
   background: #fff;
@@ -62,7 +72,7 @@ body {
 
 a {
   text-decoration: none;
-  color: #fff;
+  color: var(--secondary-txt);
   i {
     font-size: 1.2em;
   }
@@ -90,36 +100,19 @@ main {
   width: min(95%, 80ch);
   margin-inline: auto;
   padding: clamp(1.66em, 5%, 4rem);
-  background: #fff;
+  background: var(--primary-bg);
+  color: var(--primary-txt);
   border-radius: 4px;
-  background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
 }
 
-@keyframes pulse {
-  0% {
-    opacity: 0.2;
-    border-radius: 50% 0;
+//Background animations
+@keyframes scroll {
+  from {
+    background-position-y: 0;
+    background-position-x: 0;
   }
-  25% {
-    border-radius: 25% 25%;
-  }
-  50% {
-    border-radius: 50% 0;
-  }
-  100% {
-    border-radius: 0;
-    opacity: 1;
-  }
-}
-
-@keyframes grow {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.5);
-  }
-  100% {
-    transform: scale(1);
+  to {
+    background-position-y: -100vh;
+    background-position-x: -50vw;
   }
 }

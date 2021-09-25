@@ -10,22 +10,19 @@ import { filter, map } from 'rxjs/operators';
 })
 export class AppComponent implements OnInit {
 
-  baseTitle: string = 'Sourabh Patel | '
+  baseTitle: string = 'Sourabh Patel | ';
 
-  constructor(private title: Title, private router: Router, private activatedRoute: ActivatedRoute) { }
+  constructor(
+    private title: Title,
+    private router: Router,
+    private activatedRoute: ActivatedRoute) { }
 
   ngOnInit() {
-    console.info(`
-    #######  #######  ######   ###  ## 
-    ##       ##   ##  ##  ##   ###  ## 
-    #######  ##   ##  ##  ##   ###  ## 
-         ##  ##  ###  #######   #####  
-    ###  ##  ##  ###  ### ###  ##  ### 
-    ###  ##  ##  ###  ### ###  ##  ### 
-    #######  #######  ### ###  ##  ###
-    `);
-    console.log('i see you are man of curiuosity O_o too.....');
+    this.setupTitleWorker();
+    this.msgs();
+  }
 
+  private setupTitleWorker() {
     this.router.events.pipe(
       filter(event => event instanceof NavigationEnd),
       map(() => {
@@ -39,5 +36,17 @@ export class AppComponent implements OnInit {
           this.baseTitle + child.snapshot.data['title'] : this.baseTitle;
       })
     ).subscribe((ttl: string) => this.title.setTitle(ttl));
+  }
+  private msgs() {
+    console.info(`
+    #######  #######  ######   ###  ## 
+    ##       ##   ##  ##  ##   ###  ## 
+    #######  ##   ##  ##  ##   ###  ## 
+         ##  ##  ###  #######   #####  
+    ###  ##  ##  ###  ### ###  ##  ### 
+    ###  ##  ##  ###  ### ###  ##  ### 
+    #######  #######  ### ###  ##  ###
+    `);
+    console.log('i see you are man of curiuosity O_o too.....');
   }
 }

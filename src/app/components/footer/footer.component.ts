@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { ThemeService } from 'src/app/services/theme.service';
 
 @Component({
   selector: 'app-footer',
@@ -8,7 +7,7 @@ import { ThemeService } from 'src/app/services/theme.service';
 })
 export class FooterComponent implements OnInit {
 
-  constructor(public theme: ThemeService) { }
+  constructor() { }
 
   ngOnInit(): void {
   }

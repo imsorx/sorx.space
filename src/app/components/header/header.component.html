@@ -3,29 +3,34 @@
     <p>sorx</p>
     <p>Sourabh Patel</p>
   </a>
-  <nav [ngClass]="{ open: isOpen }">
-    <a
-      routerLink="/"
-      routerLinkActive="active"
-      [routerLinkActiveOptions]="{ exact: true }"
-      #close
-    >
-      <i class="ri-user-5-fill"></i> About
-    </a>
-    <a routerLink="/timeline" routerLinkActive="active" #close>
-      <i class="ri-calendar-check-fill"></i> Timeline
-    </a>
-    <a routerLink="/resources" routerLinkActive="active" #close>
-      <i class="ri-archive-drawer-fill"></i> Resources
-    </a>
-    <a routerLink="/blog" routerLinkActive="active" #close>
-      <i class="ri-article-fill"></i> Blog
-    </a>
-    <button [hidden]="isOpen" #close>
-      <i class="ri-close-line"></i>
+  <div class="nav-links">
+    <nav [ngClass]="{ open: isOpen }">
+      <a
+        routerLink="/"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: true }"
+        #close
+      >
+        <i class="ri-user-5-fill"></i> About
+      </a>
+      <a routerLink="/timeline" routerLinkActive="active" #close>
+        <i class="ri-calendar-check-fill"></i> Timeline
+      </a>
+      <a routerLink="/resources" routerLinkActive="active" #close>
+        <i class="ri-archive-drawer-fill"></i> Resources
+      </a>
+      <a routerLink="/blog" routerLinkActive="active" #close>
+        <i class="ri-article-fill"></i> Blog
+      </a>
+      <button class="nav-toggle" [hidden]="isOpen" #close>
+        <i class="ri-close-line"></i>
+      </button>
+    </nav>
+    <button aria-label="Change color scheme" class="theme-toggle" (click)="toggle()">
+      <i [ngClass]="isDarkTheme ? 'ri-moon-fill':'ri-sun-fill'"></i>
     </button>
-  </nav>
-  <button (click)="isOpen = true" aria-label="Open navigation menu">
-    <i class="ri-menu-5-fill"></i>
-  </button>
+    <button class="nav-toggle" (click)="isOpen = true" aria-label="Open navigation menu">
+      <i class="ri-menu-5-fill"></i>
+    </button>
+  </div>
 </header>

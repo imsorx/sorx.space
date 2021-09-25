@@ -32,7 +32,7 @@ ul {
       height: 12px;
       border: 3px solid transparent;
       border-radius: 50%;
-      background-color: var(--primary-accent);
+      background-color: var(--accent);
       transition: all 200ms ease-in-out;
     }
 
@@ -45,7 +45,7 @@ ul {
       left: 8px;
       bottom: 0;
       width: 2px;
-      background-color: var(--primary-accent);
+      background-color: var(--accent-dark);
     }
 
     &:last-child::after {
@@ -53,7 +53,7 @@ ul {
     }
 
     &:hover::before {
-      border-color: var(--primary-accent);
+      border-color: var(--accent);
       background-color: transparent;
     }
   }

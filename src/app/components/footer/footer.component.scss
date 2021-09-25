@@ -1,24 +1,11 @@
 footer {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   width: min(100%, 80ch);
   margin-inline: auto;
   padding: 1em;
-  color: #fff;
-}
-button {
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding-bottom: 0.5em;
-  font-size: 0.9rem;
   color: var(--primary-txt);
-  border-bottom: 1px solid var(--primary-txt);
-  transition: all 300ms ease-out;
-  &:hover {
-    border-bottom-color: transparent;
-  }
 }
 .socials {
   a {
@@ -27,6 +14,7 @@ button {
     align-items: center;
     padding: 1em;
     font-size: 1.2em;
+    color: var(--primary-txt);
 
     span {
       position: absolute;
@@ -34,9 +22,9 @@ button {
       left: 0;
       transform: translate(0%, 0%);
       padding: 0.4em;
-      color: #212121;
+      color: var(--primary-txt);
       font-size: 0.9rem;
-      background: #fff;
+      background: var(--primary-bg-light);
       border-radius: 4px;
       opacity: 0;
       transition: all 200ms;
@@ -48,7 +36,7 @@ button {
       left: 50%;
       transform: translate(-50%, 130%);
       border: 5px solid #fff;
-      border-color: #fff transparent transparent transparent;
+      border-color: var(--primary-bg-light) transparent transparent transparent;
       opacity: 0;
       transition: all 100ms;
     }

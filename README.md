@@ -12,19 +12,18 @@
 <p align="center">
   <a href="#overview">Overview</a> •
   <a href="#build">Build</a> •
-  <a href="#author">Author</a> •
-  <a href="#license">License</a>
+  <a href="#author">Author</a> 
 </p>
 
 # Overview
 
 <p align="center">
 </p>
-I've build this website from scratch without no frameworks and without any mockups, i love to experiments around a lot and you can see it in this website ;)
+A simple website build without CSS frameworks and mockups, I love to experiments around a lot and you can see some of it here ;)
 
 ## Build
 
-First you need to install all dependencies by following command:
+Install all dependencies:
 
 ```bash
 $npm i
