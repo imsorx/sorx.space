@@ -42,7 +42,7 @@
               "vendorChunk": false,
               "extractLicenses": false,
               "sourceMap": false,
-              "namedChunks": true,
+              "namedChunks": false,
               "budgets": [
                 {
                   "type": "initial",
