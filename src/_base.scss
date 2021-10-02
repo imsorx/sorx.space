@@ -13,8 +13,8 @@
   --primary-txt: hsl(0, 0%, 100%);
   --primary-txt-light: hsl(0, 0%, 70%);
   --secodary-txt: hsl(0, 0%, 5%);
-  --primary-bg: hsl(0, 0%, 10%);
-  --primary-bg-light: hsl(0, 0%, 18%);
+  --primary-bg: hsl(0, 0%, 5%);
+  --primary-bg-light: hsl(0, 0%, 10%);
   --secondary-bg: hsl(0, 0%, 90%);
   &::after{
     filter: invert(0%);
@@ -57,7 +57,7 @@ body {
   overflow-x: hidden;
 }
 ::selection {
-  background: var(--accent-dark);
+  background: var(--accent);
   color: var(--secondary-txt);
 }
 

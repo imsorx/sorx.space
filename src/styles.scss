@@ -113,11 +113,15 @@
     padding-left: 0.5em;
     font-size: 0.9em;
     font-style: italic;
-    margin-block: 1em;
+    margin-bottom: 1em;
+    padding-block: 0.5em;
     color: var(--primary-txt);
     border-left: 3px solid var(--accent);
     background: var(--primary-bg-light);
-    border-radius: 4px;
+    border-radius: 4px 0 0 4px;
+    p{
+      margin: 0;
+    }
   }
 
   img {
