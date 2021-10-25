@@ -1,3 +1,4 @@
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { TimelineComponent } from './timeline.component';
@@ -8,6 +9,7 @@ describe('TimelineComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
+      imports:[HttpClientTestingModule],
       declarations: [ TimelineComponent ]
     })
     .compileComponents();
@@ -21,5 +23,9 @@ describe('TimelineComponent', () => {
 
   it('should create', () => {
     expect(component).toBeTruthy();
+  });
+
+  it('timeline items is undfined initially',()=>{
+    expect(component.items).toBeUndefined();
   });
 });

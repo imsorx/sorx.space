@@ -1,4 +1,7 @@
+import { HttpClient } from '@angular/common/http';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { MarkdownModule, MarkdownService } from 'ngx-markdown';
 
 import { ResourcesComponent } from './resources.component';
 
@@ -8,7 +11,11 @@ describe('ResourcesComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ResourcesComponent ]
+      imports:[
+        HttpClientTestingModule,
+        MarkdownModule.forRoot({loader:HttpClient})],
+      declarations: [ ResourcesComponent ],
+      providers:[MarkdownService]
     })
     .compileComponents();
   });

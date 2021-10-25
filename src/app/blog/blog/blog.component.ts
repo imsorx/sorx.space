@@ -2,13 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { SlideInLeft } from 'src/app/animations';
 import { BlogService } from 'src/app/services/blog.service';
 
-interface Post {
-  title: string,
-  file: string,
-  description: string,
-  cover: string
-}
-
 @Component({
   selector: 'app-blog',
   templateUrl: './blog.component.html',

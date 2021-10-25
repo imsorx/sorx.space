@@ -1,4 +1,6 @@
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { BlogService } from 'src/app/services/blog.service';
 
 import { BlogComponent } from './blog.component';
 
@@ -8,7 +10,9 @@ describe('BlogComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ BlogComponent ]
+      imports:[HttpClientTestingModule],
+      declarations: [ BlogComponent ],
+      providers:[BlogService]
     })
     .compileComponents();
   });

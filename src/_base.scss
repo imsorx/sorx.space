@@ -1,3 +1,7 @@
+@import "~@fontsource/raleway/800";
+@import "~@fontsource/nunito/400";
+@import "~@fontsource/nunito/700";
+
 :root {
   --accent: hsl(37, 92%, 51%);
   --accent-light: hsl(37, 98%, 70%);
@@ -24,7 +28,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Work Sans", sans-serif;
+  font-family: "Nunito";
 }
 
 html {
@@ -84,7 +88,6 @@ ul {
 
   li {
     line-height: 2;
-    font-family: "Bitter", serif;
     &::marker {
       content: "\EA6E";
       line-height: 2;
