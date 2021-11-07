@@ -1,0 +1,26 @@
+[
+    {
+      "year": 1997,
+      "activity": "🐣 Born",
+      "vanue": null,
+      "location": null
+    },
+    {
+      "year": 2015,
+      "activity": "📚 Senior High School",
+      "vanue": "N.H.S.S",
+      "location": "Jabalpur"
+    },
+    {
+      "year": 2020,
+      "activity": "👨‍🎓 Graduate, B.E.",
+      "vanue": "IPS Academy",
+      "location": "Indore"
+    },
+    {
+      "year": 2020,
+      "activity": "💼 Solution Engineer",
+      "vanue": "Gammastack Ltd.",
+      "location": "Indore"
+    }
+  ]

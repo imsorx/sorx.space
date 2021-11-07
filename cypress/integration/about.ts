@@ -10,7 +10,7 @@ describe('About Page', () => {
     });
 
     it('Fetch readme markdown and renders it', () => {
-        cy.intercept('**/imsorx/main/README.md').as('readme');
+        cy.intercept('**/imsorx/main/README.md',{fixture:'readme.md'}).as('readme');
         cy.visit('/');
         cy.wait('@readme').then(interception => {
             cy.wrap(interception.response).should('have.a.property', 'statusCode').should('eq', 200);

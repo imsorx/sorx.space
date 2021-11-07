@@ -10,12 +10,12 @@ describe('Timeline Page', () => {
     });
 
     it('Fetch data and render', () => {
-        cy.intercept('**/timeline.json').as('data');
+        cy.intercept('**/timeline.json',{fixture:'timeline.json'}).as('data');
         cy.visit('/timeline')
         cy.wait('@data').then(interception => {
             cy.wrap(interception.response).should('have.a.property', 'statusCode').should('eq', 200);
             cy.wait(1000);
-            cy.get('main ul').children().should('length', JSON.parse(interception.response?.body).length);
+            cy.get('main ul').children().should('length', interception.response?.body.length);
         });
     });
 });
