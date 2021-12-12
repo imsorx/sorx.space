@@ -4,13 +4,8 @@
     <p>Sourabh Patel</p>
   </a>
   <div class="nav-links">
-    <nav [ngClass]="{ open: isOpen }">
-      <a
-        routerLink="/"
-        routerLinkActive="active"
-        [routerLinkActiveOptions]="{ exact: true }"
-        #close
-      >
+    <nav [ngClass]="{ open: isOpen }" [@reveal]="isOpen ? 'open':'hidden'">
+      <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" #close>
         <i class="ri-user-5-fill"></i> About
       </a>
       <a routerLink="/timeline" routerLinkActive="active" #close>
