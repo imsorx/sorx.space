@@ -1,4 +1,4 @@
-<div markdown (error)="onError($event)" [src]="url" class="md"></div>
+<div markdown (error)="onError($event)" [data]="content" class="md"></div>
 <p *ngIf="isFailed" align="center">
   Oops Github's server is not responding...🤷‍♂️
 </p>
